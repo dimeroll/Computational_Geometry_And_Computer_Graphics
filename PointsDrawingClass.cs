@@ -10,7 +10,7 @@ namespace Lab1Geometry
     {
         public static void DrawPoints(MouseEventArgs e, bool drawSegments, List<Point> points, Graphics graphics)
         {
-            if (drawSegments == false)
+            if (drawSegments == true)
             {
                 PerpendicularDrawingClass.DrawPerpendicular(e.Location, graphics, new Pen(Color.Black, 1));
                 points.Add(e.Location);
