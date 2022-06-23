@@ -11,5 +11,7 @@ namespace Lab1Geometry
         {
             graphics.DrawLine(new Pen(Color.Black, 7), new Point(-1000, 0), new Point(3000, 0));
         }
+
+        public static void Status() { }
     }
 }
