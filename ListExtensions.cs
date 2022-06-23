@@ -33,7 +33,5 @@ namespace Lab1Geometry
                          .OrderBy(t => t.Item1.X)
                          .ToList();
         }
-
-        private static void Change1() { }
     }
 }
