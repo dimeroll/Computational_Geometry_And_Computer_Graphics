@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Lab1Geometry
 {
-    static class PerpendicularDrawingClass
+    public class PerpendicularDrawer
     {
-        public static void DrawPerpendicular(Point p, Graphics graphics, Pen pen)
+        public void DrawPerpendicular(Point p, Graphics graphics, Pen pen)
         {
             int segmentLength = 10;
             int y = p.Y;

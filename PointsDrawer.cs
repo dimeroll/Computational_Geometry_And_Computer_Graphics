@@ -6,13 +6,14 @@ using System.Windows.Forms;
 
 namespace Lab1Geometry
 {
-    static class PointsDrawingClass
+    public class PointsDrawer
     {
-        public static void DrawPoints(MouseEventArgs e, bool drawSegments, List<Point> points, Graphics graphics)
+        private PerpendicularDrawer perpendicularDrawer = new PerpendicularDrawer();
+        public void DrawPoints(MouseEventArgs e, bool drawSegments, List<Point> points, Graphics graphics)
         {
             if (drawSegments)
             {
-                PerpendicularDrawingClass.DrawPerpendicular(e.Location, graphics, new Pen(Color.Black, 1));
+                perpendicularDrawer.DrawPerpendicular(e.Location, graphics, new Pen(Color.Black, 1));
                 points.Add(e.Location);
                 var count = points.Count;
                 if (count % 2 == 0)

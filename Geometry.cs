@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Lab1Geometry
 {
-    static class Geometry
+    public class Geometry
     {
-        public static Point FindIntersection(int x0, Point p1, Point p2)
-        {
-            double y = (p2.Y - p1.Y) * (x0 - p1.X) / (p2.X - p1.X) + p1.Y;
-            return new Point(x0, (int)y);
-        }
+        private OXaxisDrawer oxAxisDrawer = new OXaxisDrawer();
+        private PointsDrawer pointsDrawer = new PointsDrawer();
+
+        public void DrawOXaxis(Graphics graphics) => oxAxisDrawer.DrawOXaxis(graphics);
+        public void DrawPoints(MouseEventArgs e, bool drawSegments, List<Point> points, Graphics graphics) => 
+            pointsDrawer.DrawPoints(e, drawSegments, points, graphics);
     }
 }
